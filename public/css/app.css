@@ -262,15 +262,17 @@ div .art_cnt1, div .art_cnt2, div .art_cnt3{
     padding: 10px;
     margin: 10px;
     border: solid 2px #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
 
   .record_title {
     margin-top: 5px;
     padding: 5px;
-    background: #eee;
-    color: #000;
+    background: var(--greenheader);
+    color: var(--off-white);
     font-weight: 750;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
   }
 
   /* Style the play button */

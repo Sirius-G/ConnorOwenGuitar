@@ -33,7 +33,6 @@
 
                     @include('inc.recordplayer')
 
-
                 </div>
             </div>
         </div>
