@@ -1,4 +1,6 @@
+
 <div class="flex justify-center bg-white p-4">
+    <h2 class="header_title">Videos</h2>
     <div class="row">
         <div class="col-sm-12 col-md-6">
             <div class="video-container mt-2" >

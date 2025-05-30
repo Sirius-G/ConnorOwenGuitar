@@ -31,7 +31,7 @@
 
                     @include('inc.videos')
 
-
+                    @include('inc.recordplayer')
 
 
                 </div>
