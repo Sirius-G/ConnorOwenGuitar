@@ -1,0 +1,222 @@
+/* Brand variables */
+:root {
+    --green: #6e9a64;
+    --greenhover: #3e5638;
+    --greenheader: rgba(110, 154, 100, 0.95);
+    --greenhighlight: #92d384cc;
+    --whitecard: rgba(255, 255, 255, 0.95);
+    --transparent-off-white: rgba(255, 255, 255, 0.7);
+    --transparent-charcoal: rgba(92, 90, 90, 0.4);
+    --charcoal: #333;
+    --off-white: #eee;
+    --bs-card-bg:  rgba(255, 255, 255, 0.7) !important;
+}
+
+p {
+    font-size: 16px;
+}
+
+.card,
+.card-body,
+.card-header {
+    background-color: transparent !important;
+}
+
+@media (max-width: 800px) {
+    .over-card {
+        width: 100%;
+        margin: -5px auto 0px auto !important;
+    }
+    .actionbutton {
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 801px) {
+    .over-card {
+        width: 100%;
+        margin-top: clamp(-55px, -5vw, -180px);
+        margin-left: auto  !important;
+        margin-right: auto  !important;
+    }
+    .actionbutton {
+        margin-top: -2px;
+    }
+}
+
+.whitecard {
+    background-color: var(--whitecard) !important;
+}
+
+.greenheader {
+    background-color: var(--greenheader) !important;
+}
+
+.headerimage, .card {
+    width: 100%;
+    border: solid 1px #bbb;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.hover-button {
+    background-color: #fff !important;
+    /* White */
+    color: #2e382b !important;
+    border: 1px solid #fff !important;
+}
+
+.hover-button:hover {
+    background-color: #3e5638 !important;
+    /* Darker shade of green */
+    color: #fff !important;
+    transition: all 0.3s ease;
+    /* Smooth transition */
+}
+
+nav {
+    background-color: var(--greenheader) !important;
+    color: #fff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 800px) {
+    nav .nav-item {
+        width: 100% !important;
+        border-right: 0;
+        border-right: none;
+        border-left: 0;
+        border-left: none;
+        border-bottom: solid 1px #333;
+    }
+}
+
+.small_banner {
+    max-width: 50vw !important;
+}
+
+.lft1 {
+    border-left: solid 1px #333;
+    height: 70px;
+}
+
+.lft {
+    width: 150px !important;
+    border-right: solid 1px #333;
+    height: 70px;
+    padding-top: 15px;
+    background-color: #6e9a64;
+    text-align: center;
+}
+
+.lft:hover,
+.rhs:hover {
+    background-color: var(--whitecard);
+}
+
+.rhs {
+    width: 150px !important;
+    border-right: solid 1px #333;
+    border-left: solid 1px #333;
+    height: 70px;
+    padding-top: 15px;
+    color: #fff !important;
+    background-color: #6e9a64;
+    text-align: center;
+}
+
+.active {
+    background: var(--transparent-off-white);
+    font-weight: 800 !important;
+}
+
+/* ===================== Contact form rules =================== */
+.contact_form {
+    width: 80%;
+    padding: 20px;
+    background: var(--greenheader);
+    color: #fff !important;
+    font-family: sans-serif;
+    margin: 0 auto;
+    border-radius: 30px;
+    box-shadow: 0 60px 60px var(--transparent-charcoal);
+}
+
+.contact_form .label {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff !important;
+    padding-top: 20px;
+}
+
+.field {
+    width: 100%;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.texta {
+    width: 100%;
+    height: 200px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.butn {
+    font-size: 18px;
+    background: var(--charcoal);
+    color: var(--off-white);
+    margin-top: 20px;
+    padding: 5px;
+}
+
+
+/* ===================== Video rules =================== */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+/* =================== Admin rules ======================== */
+div .art_cnt1, div .art_cnt2, div .art_cnt3{
+	white-space: pre-wrap;
+	text-align: left;
+	height: 350px;
+	width: 100%;
+	overflow-y: scroll;
+	border: solid #000 1px;
+	padding: 10px;
+}
+
+/* =================== Keyboard access ======================== */
+ /* .item {
+    display: inline-block;
+    margin: 3px;
+    cursor: pointer;
+  }  */
+
+.item:focus-visible , input.item:focus-visible   {
+    outline: none !important; /* Remove default blue border */
+    outline: 2px solid var(--greenhighlight) !important; /* highlights the focused link */
+    background-color: #fffbe6;  /* optional: soft yellow background */
+    border-radius: 4px;         /* optional: just makes it look nice */
+}
+
+.nav-link.item {
+    padding: 21px 0px 20px 0px !important;
+    margin-top: -12px !important;
+}
+  
