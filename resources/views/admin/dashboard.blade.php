@@ -87,6 +87,57 @@
             </div>
         </div>
 
+
+
+        <h1 class="m-4">Added video links</h1>
+<!-- <div class="container"> -->
+<div class="row px-4">
+<div class="col-sm-12 text-center">
+    <a href="#" 
+        title="" 
+        aria-label="" 
+        class="btn btn-primary btn-lg px-4 py-2 rounded-3 shadow-sm hover-button" 
+        data-bs-toggle="modal" 
+        data-bs-target="#AddVideo">
+        <i class="fa fa-video fa-lg"></i> Add a new video
+    </a>
+    
+    <br><hr>
+</div>
+@if(count($my_videos)>0)
+@foreach($my_videos as $v)
+<div class="col-sm-12 col-md-4 mt-4">
+    <div class="card bg-white">
+    <div class="card-header greenheader">
+        <p class="card-title text-center">
+            @if(strlen($v->title)>60)
+                <strong class="text-white">{{substr($v->title,0,60)}}..</strong>
+            @else 
+                <strong class="text-white">{{$v->title}}</strong>
+            @endif
+        </p>
+    </div>
+    <div class="card-body text-center">
+        <iframe src="{{$v->video_index}}" width="100%"></iframe>
+    </div>
+    <div class="card-footer">
+        @if($v->deleted_at ==null)
+            Added: {{$v->created_at->diffForHumans()}}<br>
+            <a href="{{route('edit.video', $v->id)}}" class="btn btn-success btn-sm"> Edit </a>
+            <a href="{{route('softdelete.video', $v->id)}}" class="btn btn-danger btn-sm d-inline float-end"> Delete </a>
+        @else 
+            Deleted: {{$v->deleted_at->diffForHumans()}}<br>
+            <a href="{{route('restore.video', $v->id)}}" class="btn btn-primary btn-sm d-inline float-end"> Restore </a>
+        @endif
+    </div>
+    </div>
+</div>
+@endforeach
+@else 
+    <h3 class="card p-2">No videos have been added yet.</h3>
+@endif
+</div>
+
 </div>
 
 
@@ -418,4 +469,119 @@
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<div class="modal fade" data-bs-backdrop="false" tabindex="-1" role="dialogue" id="AddVideo">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+        <button type="button" id="dismiss_cinema" class="close pull-right" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <div class="row mb-4">
+              <div class="col-sm-12">
+                  <br>
+                  <div>
+                    <h1 class="m-4">Add a new YouTube video link</h1>
+                    <div class="container">
+                        <hr>
+                        <div class="card p-4 greenheader">
+                            <div class="row">
+
+                            <strong>All fields are required</strong><br>
+
+                            <form action="{{ route('add.video')}}" method="POST" enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                <div class="row">
+                                    <div class="col-sm-12 mt-4">
+                                        <label class="fw-bold"> Paste YouTube Video ID (ONLY): </label><br>
+                                        <input type="text" class="form-control" name="video_index"> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 mt-4">
+                                        <label class="fw-bold"> Video title: </label>
+                                        <input type="text" class="form-control" placeholder="Max 200 Characters - Alphanumeric Characters Only" name="title" maxlength="200" required> 
+                                    </div> 
+                                </div>
+                                <br>
+                                <button class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button" type="submit">
+                                    <i class="fa fa-video fa-lg"></i> Embed Video
+                                </button> 
+                            </form>
+                        </div>
+                    </div>
+
+                    </div>
+                    </div>
+                    <br>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" data-bs-backdrop="false" tabindex="-1" role="dialogue" id="EditVideo">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+        <button type="button" id="dismiss_cinema" class="close pull-right" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <div class="row mb-4">
+              <div class="col-sm-12">
+                  <br>
+                  <div>
+                    <h1 class="m-4">Add a new YouTube video link</h1>
+                    <div class="container">
+                        <hr>
+                        <div class="card p-4 greenheader">
+                            <div class="row">
+
+                            <strong>All fields are required</strong><br>
+
+                            <form action="{{ route('add.video')}}" method="POST" enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                <div class="row">
+                                    <div class="col-sm-12 mt-4">
+                                        <label class="fw-bold"> Paste YouTube Video ID (ONLY): </label><br>
+                                        <input type="text" class="form-control" name="video_index"> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 mt-4">
+                                        <label class="fw-bold"> Video title: </label>
+                                        <input type="text" class="form-control" placeholder="Max 200 Characters - Alphanumeric Characters Only" name="title" maxlength="200" required> 
+                                    </div> 
+                                </div>
+                                <br>
+                                <button class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button" type="submit">
+                                    <i class="fa fa-video fa-lg"></i> Embed Video
+                                </button> 
+                            </form>
+                        </div>
+                    </div>
+
+                    </div>
+                    </div>
+                    <br>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
 @endsection

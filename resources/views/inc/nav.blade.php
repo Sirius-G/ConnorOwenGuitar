@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md shadow-sm sticky-top">
             <div class="container">
                 <a class="navbar-brand item" href="{{ url('/') }}" tabindex="0" title="Connor Owen Guitar Logo and Linked Index" aria-lable="Connor Owen Guitar Logo and Linked Index">
-                    <img src="images/logo.png" alt="Connor Owen Guitar Logo" height="60px">
+                    <img src="images/logo.jpg" alt="Connor Owen Guitar Logo" height="60px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -11,7 +11,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item lft lft1">
-                            <a href="/" tabindex="1" title="Bio - Connor Owen Guitar" aria-label="Bio - Connor Owen Guitar" class="nav-link item">
+                            <a href="/bio" tabindex="1" title="Bio - Connor Owen Guitar" aria-label="Bio - Connor Owen Guitar" class="nav-link item">
                                 Bio
                             </a>
                         </li>

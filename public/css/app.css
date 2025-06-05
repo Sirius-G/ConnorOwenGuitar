@@ -9,7 +9,65 @@
     --transparent-charcoal: rgba(92, 90, 90, 0.4);
     --charcoal: #333;
     --off-white: #eee;
+    --bg: #f0e8db;
     --bs-card-bg:  rgba(255, 255, 255, 0.7) !important;
+}
+
+
+html, body {
+    background-color: var(--bg) !important;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    transition: opacity 0.7s ease-in;
+  }
+
+  body.fade-out {
+    opacity: 0;
+  }
+
+  #progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #eee;
+    z-index: 9999;
+  }
+
+  #progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #4caf50;
+    transition: width 2.5s linear;
+  }
+
+
+.logocontainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        position: absolute;
+        width: 60%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (min-width: 769px) {
+    .logo {
+        position: absolute;
+        width: 35%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 p {
@@ -174,20 +232,35 @@ nav {
 
 
 /* ===================== Video rules =================== */
+.header_title {
+    padding: 5px 20px ;
+    margin-bottom: 20px;
+    background-color: var(--greenheader);
+    color: var(--off-white);
+    border-radius: 10px;
+}
 
 .video-container {
     position: relative;
+    width: 100% !important;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
   }
   
-  .video-container video {
+  .video-container iframe {
     position: absolute;
+    padding: 5px;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .video_title {
+    padding: 10px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
   }
 
 /* =================== Admin rules ======================== */
@@ -220,81 +293,3 @@ div .art_cnt1, div .art_cnt2, div .art_cnt3{
     margin-top: -12px !important;
 }
 
-/* ================= RECORD PLAYER RULES ================= */
-/* Style the page title */
-.header_title {
-    max-width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 30px;
-    color: var(--off-white);
-    background: var(--greenheader);
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-  /* Container for flexboxes */
-  section {
-    display: -webkit-flex;
-    display: flex;
-    max-width: 100vw;
-    flex-flow: row wrap;
-    padding: 10px;
-  }
-  
-  /* Style the record player */
-  .record_player {
-    -webkit-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
-    padding: 10px;
-    min-height: 250px;
-    max-width: 250px;
-    margin: 10px auto;
-    background: rgba(255, 255, 255, 0.8);
-    border: solid 2px #fff;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-
-  .record {
-    height: 200px;
-    padding: 10px;
-    margin: 10px;
-    border: solid 2px #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-
-  .record_title {
-    margin-top: 5px;
-    padding: 5px;
-    background: var(--greenheader);
-    color: var(--off-white);
-    font-weight: 750;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-  }
-
-  /* Style the play button */
-  .play_butn {
-    width: 50px;
-    padding: 5px;
-  }
-
-  /* Style the progress bar */
-  .progress-bar {
-    width: 100%;
-    background-color: #333;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    border: solid 1px #333;
-  }
-  
-  #progress_1, #progress_2, #progress_3 {
-    height: 10px;
-    background-color: #4caf50;
-    border-radius: 5px;
-    width: 0;
-    transition: width 0.5s ease;
-  }
-  

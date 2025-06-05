@@ -27,14 +27,11 @@
 </head>
 <body>
     <div id="app">
-            @include('inc.nav')
 
         <main class="py-4">
             @yield('content')
-
         </main>
 
-            @include('inc.footer')
     </div>
 
     <script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script>

@@ -1,43 +1,30 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
-<div class="container">
-    <div class="header">
-        <img src="images/Connor_Banner.avif" alt="Connor Owen Guitar Banner image" class="headerimage">
-    </div>
-
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="card over-card">
-                <div class="card-header greenheader">
-                    <strong class="text-white">Bio</strong>
-                    <div class="d-flex justify-content-end" style="margin-top: -20px;">
-                        <a href="/tuition" title="Tuition at Connor Owen Guitar" aria-label="Tuition at Connor Owen Guitar" class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button item">
-                                <strong>Want to learn guitar? &nbsp; Find out more</strong>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card-body whitecard">
-                    @if(count($data)>0)
-                    @foreach($data as $d)
-                        {!! html_entity_decode($d->content) !!}
-                    @endforeach
-                    @endif
-                    
-                    <!-- <div class="d-flex justify-content-center">
-                        <img src="images/banner.jpg" alt="social handles banner image" class="mb-4 small_banner">
-                    </div> -->
-
-                    @include('inc.videos')
-
-                    @include('inc.recordplayer')
-
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="logocontainer">
+    <img src="images/logofull.jpg" class="logo">
+</div>
+<div id="progress-bar-container">
+    <div id="progress-bar"></div>
 </div>
 
-<script>showActive(1);</script>
+<script>
+    const progressBar = document.getElementById("progress-bar");
+
+    // Kick off animation shortly after page load
+    window.onload = () => {
+      progressBar.style.width = "100%";
+
+      // Start fade-out just before redirect
+      setTimeout(() => {
+        document.body.classList.add("fade-out");
+      }, 2500); // allow full bar to show
+
+      // Redirect after fade
+      setTimeout(() => {
+        window.location.href = "/bio";
+      }, 3000); // total duration = 3 seconds
+    };
+  </script>
+
 @endsection
