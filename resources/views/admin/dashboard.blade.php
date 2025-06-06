@@ -121,10 +121,27 @@
         <iframe src="{{$v->video_index}}" width="100%"></iframe>
     </div>
     <div class="card-footer">
-        @if($v->deleted_at ==null)
+        @if($v->deleted_at == null)
             Added: {{$v->created_at->diffForHumans()}}<br>
-            <a href="{{route('edit.video', $v->id)}}" class="btn btn-success btn-sm"> Edit </a>
-            <a href="{{route('softdelete.video', $v->id)}}" class="btn btn-danger btn-sm d-inline float-end"> Delete </a>
+            <a href="#" 
+                title="" 
+                aria-label="" 
+                class="btn btn-success btn-sm px-2 rounded-3 shadow-sm" 
+                data-bs-toggle="modal" 
+                data-bs-target="#EditVideo"
+                data-id="{{ $v->id }}"
+                data-title="{{ $v->title }}"
+                data-description="{{ $v->video_index }}">
+                Edit
+            </a>
+            <a href="{{route('softdelete.video', $v->id)}}" class="btn btn-danger btn-sm px-2 rounded-3 shadow-sm d-inline float-end"> Delete </a>
+            <!-- <a href="#" 
+                class="btn btn-success btn-sm py-2 rounded-3 shadow-sm" 
+                data-bs-toggle="modal" 
+                data-bs-target="#DeleteVideo"
+                data-id="{{ $v->id }}">
+                Edit
+            </a> -->
         @else 
             Deleted: {{$v->deleted_at->diffForHumans()}}<br>
             <a href="{{route('restore.video', $v->id)}}" class="btn btn-primary btn-sm d-inline float-end"> Restore </a>
@@ -494,7 +511,7 @@
                                 <div class="row">
                                     <div class="col-sm-12 mt-4">
                                         <label class="fw-bold"> Paste YouTube Video ID (ONLY): </label><br>
-                                        <input type="text" class="form-control" name="video_index"> 
+                                        <input type="text" class="form-control" name="video_index" required> 
                                     </div>
                                 </div>
                                 <div class="row">
@@ -536,7 +553,7 @@
               <div class="col-sm-12">
                   <br>
                   <div>
-                    <h1 class="m-4">Add a new YouTube video link</h1>
+                    <h1 class="m-4">Edit YouTube video link</h1>
                     <div class="container">
                         <hr>
                         <div class="card p-4 greenheader">
@@ -544,25 +561,47 @@
 
                             <strong>All fields are required</strong><br>
 
-                            <form action="{{ route('add.video')}}" method="POST" enctype="multipart/form-data">
+                            @method('POST')
+                                <form action="{{ route('update.video')}}" method="POST" enctype="multipart/form-data">
                                 {{ csrf_field() }}
+                                <input type="hidden" id="video_id" name="video_id" value="">
                                 <div class="row">
                                     <div class="col-sm-12 mt-4">
-                                        <label class="fw-bold"> Paste YouTube Video ID (ONLY): </label><br>
-                                        <input type="text" class="form-control" name="video_index"> 
+                                        <label class="fw-bold"> Edit the YouTube Video ID (ONLY): </label><br>
+                                        <input type="text" class="form-control" name="video_index"  id="videoDescription" required> 
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 mt-4">
                                         <label class="fw-bold"> Video title: </label>
-                                        <input type="text" class="form-control" placeholder="Max 200 Characters - Alphanumeric Characters Only" name="title" maxlength="200" required> 
+                                        <input type="text" class="form-control" placeholder="Max 200 Characters - Alphanumeric Characters Only" name="title" maxlength="200"  id="videoTitle" required> 
                                     </div> 
                                 </div>
                                 <br>
+
+                                <input type="hidden" name="vid" id="vid">
+
                                 <button class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button" type="submit">
-                                    <i class="fa fa-video fa-lg"></i> Embed Video
+                                    <i class="fa fa-video fa-lg"></i> Update Video
                                 </button> 
                             </form>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    const editModal = document.getElementById('EditVideo');
+
+                                    editModal.addEventListener('show.bs.modal', function (event) {
+                                        const button = event.relatedTarget;
+                                        const videoId = button.getAttribute('data-id');
+                                        const title = button.getAttribute('data-title');
+                                        const description = button.getAttribute('data-description');
+
+                                        // Populate form fields
+                                        document.getElementById('video_id').value = videoId;
+                                        document.getElementById('videoTitle').value = title;
+                                        document.getElementById('videoDescription').value = description;
+                                    });
+                                });
+                            </script>
                         </div>
                     </div>
 

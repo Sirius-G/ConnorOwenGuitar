@@ -31,7 +31,7 @@ class HomeController extends Controller
     public function bio()
     {
         $data = Contents::where('id', 1)->get();
-        $videos = Videos::withTrashed()->orderby('id', 'desc')->get();
+        $videos = Videos::orderby('id', 'desc')->get();
 
         return view('bio')->with('data', $data)->with('videos', $videos);
     }
@@ -93,7 +93,7 @@ class HomeController extends Controller
                 
         $this->validate($request, [
             'video_index' => 'required',
-            'title' => 'required|regex:/^[\pL0-9\s]+$/u|min:3'
+            'title' => 'required|min:3'
           ]);
 
             try{
@@ -113,24 +113,23 @@ class HomeController extends Controller
             return redirect('/admin')->with('success', 'Your video has been successfully added.');
     }
 
-    public function edit_video($id){
-        $my_videos = Videos::withTrashed()->where('id', $id)->get();
-        return view('admin.edit_video')->with('my_videos', $my_videos);  
-    }
+    // public function edit_video(Request $request){
 
-    public function update_video(Request $request, $id){
+    //     $my_videos = Videos::withTrashed()->where('id', $id)->get();
+    //     return view('admin.edit_video')->with('my_videos', $my_videos);  
+    // }
+
+    public function update_video(Request $request){
                 
         $this->validate($request, [
-            'video_asset' => 'required',
-            'title' => 'required|regex:/^[\pL0-9\s]+$/u|min:3',
-            'associated_path' => 'required|regex:/^[\pL0-9\s]+$/u|min:3',
-			'lang' => 'required|regex:/^[\pL\s]+$/u|min:2'
+            'video_index' => 'required'
           ]);
+
+            $vid = $request->input('video_id');
 
             //Create new entry into Messages get_html_translation_table
             try{
-                
-                $app = Videos::find($id);
+                $app = Videos::find($vid);
                 $app->title = $request->input('title');
 				$app->video_index = $request->input('video_index');
                 $app->save();
@@ -142,7 +141,7 @@ class HomeController extends Controller
                 }
             }
               	
-                return redirect('/admin/added_videos')->with('success', 'Your Video has been successfully updated.');
+                return redirect('/admin')->with('success', 'Your Video has been successfully updated.');
     }
     public function softdelete_video($id)
     {
