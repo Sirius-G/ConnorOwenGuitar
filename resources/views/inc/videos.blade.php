@@ -1,6 +1,6 @@
 
 <div class="flex justify-center bg-white p-4">
-    <h2 class="header_title">Videos</h2>
+    <h2 class="header_title">Watch me play!</h2>
     <div class="row">
         @foreach($videos as $v)
         <div class="col-sm-12 col-md-6">
