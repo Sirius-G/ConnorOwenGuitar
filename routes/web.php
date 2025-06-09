@@ -42,3 +42,6 @@ Route::get('/admin/edit_video', [App\Http\Controllers\HomeController::class, 'ed
 Route::post('/admin/update_video', [App\Http\Controllers\HomeController::class, 'update_video'])->name('update.video');
 Route::get('/admin/softdelete_video/{id}', [App\Http\Controllers\HomeController::class, 'softdelete_video'])->name('softdelete.video');
 Route::get('/admin/restore_video/{id}', [App\Http\Controllers\HomeController::class, 'restore_video'])->name('restore.video');
+
+
+Route::post('/admin/update_image', [App\Http\Controllers\HomeController::class, 'update_image'])->name('update.image');

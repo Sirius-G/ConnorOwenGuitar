@@ -87,6 +87,50 @@ class HomeController extends Controller
         }
     }
 
+    public function update_image(Request $request){
+                
+        $this->validate($request, [
+            'image_name' => 'required',
+            'alt' => 'required',
+            'id' => 'required'
+        ]);
+
+        $id = $request->input('id');
+
+        // return $id;
+		  		  
+        //Handle File Upload
+        if($request->hasFile('image_name')){
+
+            //Get original filename
+            $filenameWithExt = $request->file('image_name')->getClientOriginalName();
+            //Get just the filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            //Get Just filename extension
+            $extension = $request->file('image_name')->getClientOriginalExtension();
+            //Concatenate filename with date / time to make it unique
+            $fileNameToStore = $filename . '_' . time() . '.' . $extension;
+            //Upload image
+			$img = $request->file('image_name');
+            $img->move('images', $fileNameToStore);	
+		} 	  
+		  
+            //Create new entry into Messages get_html_translation_table
+            try{
+                
+                $app = Banners::find($id);
+                $app->alt = $request->input('alt');
+				$app->image_name = $fileNameToStore;
+                $app->update();
+			
+            } catch (\Illuminate\Database\QueryException $e) {
+                $errorCode = $e->errorInfo[1];
+                return back()->with('error', 'Something went wrong!'.$errorCode);
+            }
+              	
+                return redirect('/admin')->with('success', 'Your banner image has been successfully updated.');
+    }
+
     //====================== Videos ==============================
     public function show_upload_video()
     {
@@ -119,13 +163,6 @@ class HomeController extends Controller
               	
             return redirect('/admin')->with('success', 'Your video has been successfully added.');
     }
-
-    // public function edit_video(Request $request){
-
-    //     $my_videos = Videos::withTrashed()->where('id', $id)->get();
-    //     return view('admin.edit_video')->with('my_videos', $my_videos);  
-    // }
-
     public function update_video(Request $request){
                 
         $this->validate($request, [
@@ -154,14 +191,14 @@ class HomeController extends Controller
     {
         $video = Videos::find($id);
         $video->delete();
-        return back()->with('error', 'Video deleted successfully.');
+        return redirect()->back()->with('error', 'Video removed successfully.');
     }
 
     public function restore_video($id)
     {
         $video = Videos::withTrashed()->find($id);
         $video->restore();
-        return back()->with('success', 'Video restored successfully.');
+        return redirect()->back()->with('success', 'Video restored successfully.');
     }
 
 

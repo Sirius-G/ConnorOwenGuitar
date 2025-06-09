@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-<?php use App\Models\Contents; ?>
+<?php use App\Models\Contents; use App\Models\Banners; ?>
 
 @section('content')
 <div class="container">
@@ -27,6 +27,14 @@
                        data-bs-target="#Bio">
                         Edit Bio Page
                     </a>
+                    <a href="#" 
+                       title="" 
+                       aria-label="" 
+                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button d-inline float-end" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#EditBannerImage1">
+                        Edit Banner Image
+                    </a>
                 </div>
             </div>
         </div>
@@ -46,6 +54,14 @@
                        data-bs-target="#Tuition">
                         Edit Tuition Page
                     </a>
+                    <a href="#" 
+                       title="" 
+                       aria-label="" 
+                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button d-inline float-end" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#EditBannerImage2">
+                        Edit Banner Image
+                    </a>
                 </div>
             </div>
         </div>
@@ -64,6 +80,14 @@
                        data-bs-toggle="modal" 
                        data-bs-target="#Contact">
                         Edit Contact Page
+                    </a>
+                    <a href="#" 
+                       title="" 
+                       aria-label="" 
+                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button d-inline float-end" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#EditBannerImage3">
+                        Edit Banner Image
                     </a>
                 </div>
             </div>
@@ -618,6 +642,231 @@
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+
+<div class="modal fade" data-bs-backdrop="false" tabindex="-1" role="dialogue" id="EditBannerImage1">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+        <button type="button" id="dismiss_cinema" class="close pull-right" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <div class="row mb-4">
+              <div class="col-sm-12">
+                  <br>
+                  <div>
+                    <h1 class="m-4">Edit your banner image for the Bio page</h1>
+                    <div class="container">
+                        <hr>
+                        <div class="card p-4 greenheader">
+                            <div class="row">
+                            <?php $banner_image = Banners::where('id', 1)->get(); ?>
+                            <strong>All fields are required</strong><br>
+                            @if(count($banner_image)>0)
+                            @foreach($banner_image as $im)
+                            <form action="{{ route('update.image')}}" method="POST" enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                <input type="hidden" name="id" value="1">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 mt-4">
+                                        CURRENT IMAGE: {{$im->image_name}} 
+                                        <br>
+                                        <img src="{{ asset('images/' . $im->image_name) }}" style="width: 100%;"/>
+
+                                    </div>            
+                                    
+                                    <div class="col-sm-12 col-md-6 mt-4">
+                                        <label class="fw-bold"> Choose image: </label><br>
+                                        <small class="fw-bold">(jpg, jpeg or png format recommended)</small>
+                                        <input type="file" class="form-control" name="image_name"> 
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 mt-4">
+                                        <label class="fw-bold">Alternative image text: </label>
+                                        <input type="text" class="form-control" placeholder="Max 200 Characters - Alphanumeric Characters Only" name="alt" maxlength="200" value="{{$im->alt}}" required> 
+                                    </div>
+                                </div>
+                                
+                                <br>
+                                <button class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button" type="submit">
+                                    <i class="fa fa-image fa-lg"></i> Update Image
+                                </button> 
+                            </form>
+                            @endforeach
+                            @endif
+                            
+
+
+
+
+
+                        </div>
+                    </div>
+
+                    </div>
+                    </div>
+                    <br>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" data-bs-backdrop="false" tabindex="-1" role="dialogue" id="EditBannerImage2">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+        <button type="button" id="dismiss_cinema" class="close pull-right" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <div class="row mb-4">
+              <div class="col-sm-12">
+                  <br>
+                  <div>
+                    <h1 class="m-4">Edit your banner image for the Tuition page</h1>
+                    <div class="container">
+                        <hr>
+                        <div class="card p-4 greenheader">
+                            <div class="row">
+                            <?php $banner_image = Banners::where('id', 2)->get(); ?>
+                            <strong>All fields are required</strong><br>
+                            @if(count($banner_image)>0)
+                            @foreach($banner_image as $im)
+                            <form action="{{ route('update.image')}}" method="POST" enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                <input type="hidden" name="id" value="2">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 mt-4">
+                                        CURRENT IMAGE: {{$im->image_name}} 
+                                        <br>
+                                        <img src="{{ asset('images/' . $im->image_name) }}" style="width: 100%;" />
+                                    </div>            
+                                    
+                                    <div class="col-sm-12 col-md-6 mt-4">
+                                        <label class="fw-bold"> Choose image: </label><br>
+                                        <small class="fw-bold">(jpg, jpeg or png format recommended)</small>
+                                        <input type="file" class="form-control" name="image_name"> 
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 mt-4">
+                                        <label class="fw-bold">Alternative image text: </label>
+                                        <input type="text" class="form-control" placeholder="Max 200 Characters - Alphanumeric Characters Only" name="alt" maxlength="200" value="{{$im->alt}}" required> 
+                                    </div>
+                                </div>
+                                
+                                <br>
+                                <button class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button" type="submit">
+                                    <i class="fa fa-image fa-lg"></i> Update Image
+                                </button> 
+                            </form>
+                            @endforeach
+                            @endif
+                            
+
+
+
+
+
+                        </div>
+                    </div>
+
+                    </div>
+                    </div>
+                    <br>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" data-bs-backdrop="false" tabindex="-1" role="dialogue" id="EditBannerImage3">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+        <button type="button" id="dismiss_cinema" class="close pull-right" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <div class="row mb-4">
+              <div class="col-sm-12">
+                  <br>
+                  <div>
+                    <h1 class="m-4">Edit your banner image for the Contact page</h1>
+                    <div class="container">
+                        <hr>
+                        <div class="card p-4 greenheader">
+                            <div class="row">
+                            <?php $banner_image = Banners::where('id', 3)->get(); ?>
+                            <strong>All fields are required</strong><br>
+                            @if(count($banner_image)>0)
+                            @foreach($banner_image as $im)
+                            <form action="{{ route('update.image')}}" method="POST" enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                <input type="hidden" name="id" value="3">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 mt-4">
+                                        CURRENT IMAGE: {{$im->image_name}} 
+                                        <br>
+                                        <img src="{{ asset('images/' . $im->image_name) }}" style="width: 100%;" />
+                                    </div>            
+                                    
+                                    <div class="col-sm-12 col-md-6 mt-4">
+                                        <label class="fw-bold"> Choose image: </label><br>
+                                        <small class="fw-bold">(jpg, jpeg or png format recommended)</small>
+                                        <input type="file" class="form-control" name="image_name"> 
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 mt-4">
+                                        <label class="fw-bold">Alternative image text: </label>
+                                        <input type="text" class="form-control" placeholder="Max 200 Characters - Alphanumeric Characters Only" name="alt" maxlength="200" value="{{$im->alt}}" required> 
+                                    </div>
+                                </div>
+                                
+                                <br>
+                                <button class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button" type="submit">
+                                    <i class="fa fa-image fa-lg"></i> Update Image
+                                </button> 
+                            </form>
+                            @endforeach
+                            @endif
+                            
+
+
+
+
+
+                        </div>
+                    </div>
+
+                    </div>
+                    </div>
+                    <br>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 
 
 

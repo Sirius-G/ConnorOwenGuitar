@@ -1,6 +1,6 @@
 @if(count($errors) > 0)
     @foreach($errors->all() as $error)
-        <div class="toast show message_bar" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 175px; right: 10px;">
+        <div class="toast show message_bar" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 65px; right: 10px;">
             <div class="toast-header bg-danger text-white">
                 <strong class="me-auto">Alert</strong>
                 <small><?php $t = now(); echo $t->diffForHumans(); ?></small>
@@ -14,7 +14,7 @@
 @endif
 
 @if(session('success'))
-<div class="toast show message_bar" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 175px; right: 10px;">
+<div class="toast show message_bar" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 65px; right: 10px;">
     <div class="toast-header bg-success text-white">
         <strong class="me-auto">Success</strong>
         <small><?php $t = now(); echo $t->diffForHumans(); ?></small>
@@ -27,7 +27,7 @@
 @endif
 
 @if(session('error'))
-<div class="toast show message_bar" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 175px; right: 0px; z-index: 1000;">
+<div class="toast show message_bar" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 65px; right: 0px; z-index: 1000;">
     <div class="toast-header bg-danger text-white">
         <strong class="me-auto">Alert</strong>
         <small><?php $t = now(); echo $t->diffForHumans(); ?></small>
@@ -40,7 +40,7 @@
 @endif
 
 @if(session('info'))
-<div class="toast show message_bar" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 175px; right: 0px; z-index: 1000;">
+<div class="toast show message_bar" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 65px; right: 0px; z-index: 1000;">
     <div class="toast-header bg-info text-white">
         <strong class="me-auto">Info</strong>
         <small><?php $t = now(); echo $t->diffForHumans(); ?></small>
@@ -53,7 +53,7 @@
 @endif
 
 @if(session('warning'))
-<div class="toast show message_bar" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 175px; right: 0px; z-index: 1000;">
+<div class="toast show message_bar" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 65px; right: 0px; z-index: 1000;">
     <div class="toast-header bg-warning text-white">
         <strong class="me-auto">Info</strong>
         <small><?php $t = now(); echo $t->diffForHumans(); ?></small>
