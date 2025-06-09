@@ -3,7 +3,11 @@
 @section('content')
 <div class="container">
     <div class="header">
-        <img src="images/Banner_tuition.avif" alt="Connor Owen Guitar Banner image" class="headerimage">
+    @if(count($banner)>0)
+        @foreach($banner as $b)
+            <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" class="headerimage">
+        @endforeach
+        @endif    
     </div>
 
     <div class="row justify-content-center">

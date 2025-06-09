@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contents;
 use App\Models\Videos;
+use App\Models\Banners;
 
 class HomeController extends Controller
 {
@@ -30,22 +31,28 @@ class HomeController extends Controller
     }
     public function bio()
     {
+        $banner = Banners::where('id', 1)->get();
         $data = Contents::where('id', 1)->get();
         $videos = Videos::orderby('id', 'desc')->get();
 
-        return view('bio')->with('data', $data)->with('videos', $videos);
+        return view('bio')
+            ->with('data', $data)
+            ->with('videos', $videos)
+            ->with('banner', $banner);
     }
     public function tuition()
     {
+        $banner = Banners::where('id', 2)->get();
         $data = Contents::where('id', 2)->get();
 
-        return view('tuition')->with('data', $data);
+        return view('tuition')->with('data', $data)->with('banner', $banner);
     }
     public function contact()
     {
+        $banner = Banners::where('id', 3)->get();
         $data = Contents::where('id', 3)->get();
 
-        return view('contact')->with('data', $data);
+        return view('contact')->with('data', $data)->with('banner', $banner);
     }
 
     public function admin()

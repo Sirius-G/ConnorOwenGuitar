@@ -16,9 +16,11 @@ class Contents extends Model
 
     //protected $fillable = [    ];
 
-    public function Contents(){
-        return $this->belongsTo('App\Models\Contents', 'uid');
-    }
-
+    //Table Name
+    protected $table = 'contents';
+    //Primary Key
+    public $primaryKey = 'id';
+    //Timestamps
+    public $timestamps = true;
 
 }
