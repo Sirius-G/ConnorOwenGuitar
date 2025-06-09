@@ -20,7 +20,7 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}" />
-    <link rel="icon" type="image/png" sizes="64x64" href="images/logo.jpg">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/min_logo.png">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <img src="images/logofull.jpg" style="position: absolute; left: 50%; top: 50px; margin-left: -150px; width: 300px;">
+    <img src="images/logofull.png" style="position: absolute; left: 50%; top: 50px; margin-left: -150px; width: 300px;">
     <div class="card" style="position: relative; margin-top: 400px;">
         <div class="card-header greenheader">
             <strong class="text-white">{{ __('503 Error') }}</strong>

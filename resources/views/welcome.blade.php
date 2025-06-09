@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="logocontainer">
-    <img src="images/logofull.jpg" class="logo">
+    <img src="images/logofull.png" class="logo">
 </div>
 <div id="progress-bar-container">
     <div id="progress-bar"></div>

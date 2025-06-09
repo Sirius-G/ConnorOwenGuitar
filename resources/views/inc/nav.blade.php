@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md shadow-sm sticky-top">
             <div class="container">
                 <a class="navbar-brand item" href="{{ url('/') }}" tabindex="0" title="Connor Owen Guitar Logo and Linked Index" aria-lable="Connor Owen Guitar Logo and Linked Index">
-                    <img src="images/logo.jpg" alt="Connor Owen Guitar Logo" class"nav-logo">
+                    <img src="images/logo.png" alt="Connor Owen Guitar Logo" class"nav-logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
