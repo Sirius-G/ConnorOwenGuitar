@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
 <div class="container">
-<br><br><br><br><br><br>
-    <div class="card over-card">
+    <img src="images/logofull.jpg" style="position: absolute; left: 50%; top: 50px; margin-left: -150px; width: 300px;">
+    <div class="card" style="position: relative; margin-top: 400px;">
         <div class="card-header greenheader">
             <strong class="text-white">{{ __('503 Error') }}</strong>
 
