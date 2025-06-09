@@ -9,9 +9,9 @@
 
             </div>
             <div class="card-body">
-                <h1>Page not found</h1>
+                <h1>We'll be back soon!</h1>
                 <br>
-                <p>Website undergoing essential maintenance. We'll be back soon. Sorry for any inconvenience.</p>
+                <p>Sorry for the inconvenience. We're performing some maintenance right now.<br>Please check back later.</p>
             </div>  
         </div>
     <br><br><br>
