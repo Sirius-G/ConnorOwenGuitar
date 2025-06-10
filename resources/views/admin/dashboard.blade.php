@@ -22,7 +22,7 @@
                     <a href="#" 
                        title="" 
                        aria-label="" 
-                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button" 
+                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button my-1" 
                        data-bs-toggle="modal" 
                        data-bs-target="#Bio">
                         Edit Bio Page
@@ -30,7 +30,7 @@
                     <a href="#" 
                        title="" 
                        aria-label="" 
-                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button d-inline float-end" 
+                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button d-inline float-end my-1" 
                        data-bs-toggle="modal" 
                        data-bs-target="#EditBannerImage1">
                         Edit Banner Image
@@ -49,7 +49,7 @@
                     <a href="#" 
                        title="" 
                        aria-label="" 
-                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button" 
+                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button my-1" 
                        data-bs-toggle="modal" 
                        data-bs-target="#Tuition">
                         Edit Tuition Page
@@ -57,7 +57,7 @@
                     <a href="#" 
                        title="" 
                        aria-label="" 
-                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button d-inline float-end" 
+                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button d-inline float-end my-1" 
                        data-bs-toggle="modal" 
                        data-bs-target="#EditBannerImage2">
                         Edit Banner Image
@@ -76,7 +76,7 @@
                     <a href="#" 
                        title="" 
                        aria-label="" 
-                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button" 
+                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button my-1" 
                        data-bs-toggle="modal" 
                        data-bs-target="#Contact">
                         Edit Contact Page
@@ -84,7 +84,7 @@
                     <a href="#" 
                        title="" 
                        aria-label="" 
-                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button d-inline float-end" 
+                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button d-inline float-end my-1" 
                        data-bs-toggle="modal" 
                        data-bs-target="#EditBannerImage3">
                         Edit Banner Image

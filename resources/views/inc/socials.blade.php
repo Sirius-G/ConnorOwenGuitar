@@ -6,7 +6,7 @@
         </div>
         <div class="col-4">
             <a href="https://www.instagram.com/connorowenguitar/" title="Instagram - Connor Owen Guitar" aria-label="Instagram - Connor Owen Guitar" target="_blank" tabindex="10" class="item">
-                <img src="images/instagram.avif" alt="Instagram logo linking to Connor Owen Guitar">
+                <img src="images/instagram.png" alt="Instagram logo linking to Connor Owen Guitar">
             </a>
         </div>
         <div class="col-4">

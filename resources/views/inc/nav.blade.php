@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md shadow-sm sticky-top">
+<nav class="navbar navbar-expand-lg shadow-sm sticky-top">
             <div class="container">
                 <a class="navbar-brand item" href="{{ url('/') }}" tabindex="0" title="Connor Owen Guitar Logo and Linked Index" aria-lable="Connor Owen Guitar Logo and Linked Index">
                     <img src="images/logo.png" alt="Connor Owen Guitar Logo" class"nav-logo">
