@@ -10,7 +10,7 @@
             </a>
         </div>
         <div class="col-4">
-            <a href="https://www.facebook.com/ConnorOwenGuitar" title="Facebook - Connor Owen Guitar" aria-label="Facebook - Connor Owen Guitar" target="_blank" tabindex="11" class="item">
+            <a href="https://www.facebook.com/SycamoreSound" title="Facebook - Connor Owen Guitar" aria-label="Facebook - Connor Owen Guitar" target="_blank" tabindex="11" class="item">
                 <img src="images/facebook.avif" alt="Facebook logo linking to Connor Owen Guitar">
             </a>
         </div>
