@@ -5,6 +5,6 @@
     <img src="images/footer_banner.jpg" width="100%" style="margin-bottom: -18px;">
     <hr>
     <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0 mb-4">
-        &copy Guitar Tuition Hub 2019
+        &copy Sycamore Sound 2019
     </div>
 </div>
