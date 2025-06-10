@@ -26,9 +26,7 @@
 
     <!-- Scripts -->
     <!-- <script src="{{asset('/js/bootstrap5.bundle.min.js') }}"></script> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-  rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-  crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="{{asset('/js/custom.js') }}"></script>
 
     <!-- Custom Styles -->
@@ -52,14 +50,6 @@
     </div>
 
     <!-- <script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> -->
-    <!-- Bootstrap 5.3.6 JS bundle (includes Popper) -->
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-  crossorigin="anonymous">
-</script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
