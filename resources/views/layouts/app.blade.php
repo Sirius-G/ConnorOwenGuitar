@@ -25,9 +25,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Scripts -->
-    <!-- <script src="{{asset('/js/bootstrap5.bundle.min.js') }}"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="{{asset('/js/bootstrap5.bundle.min.js') }}"></script>
     <script src="{{asset('/js/custom.js') }}"></script>
 
     <!-- Custom Styles -->
@@ -50,6 +48,8 @@
             @include('inc.footer')
     </div>
 
-    <script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script>
+    <!-- <script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+
 </body>
 </html>
