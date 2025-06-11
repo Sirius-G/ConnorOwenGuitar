@@ -54,6 +54,7 @@
                                     <li>
                                         <a class="dropdown-item" href="/admin">Admin Dashboard</a>
                                     </li>
+                                    <li><hr></li>
                                     <li>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
