@@ -11,7 +11,7 @@ session()->put('uri', $_SERVER['REQUEST_URI']);
             <strong class="text-white">{{ __('404 Error') }}</strong>
 
             </div>
-            <div class="card-body">
+            <div class="card-body bg-white">
                 <h1>Page not found</h1>
                 <br>
                 <p>...redirecting, please wait!</p>
