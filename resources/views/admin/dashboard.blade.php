@@ -93,7 +93,8 @@
             </div>
         </div>
     <div>
-    <div class="col-sm-12">
+    <div class="row">
+    <div class="col-sm-12 col-md-6">
         <div class="card mt-4">
                 <div class="card-header greenheader"><strong class="text-white">Admin Registration</strong></div>
                 <div class="card-body whitecard">
@@ -110,11 +111,29 @@
                 </div>
             </div>
         </div>
-
+        <div class="col-sm-12 col-md-6">
+        <div class="card mt-4">
+                <div class="card-header greenheader"><strong class="text-white">Google Analytics</strong></div>
+                <div class="card-body whitecard">
+                    <p>View your google Analytics page.</p>
+                    <p></p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://analytics.google.com/analytics/web/#/p492591221/reports/intelligenthome" 
+                       title="Google Analytics" 
+                       aria-label="Google Analytics" 
+                       target="_blank"
+                       class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button">
+                        Open Google Analytics
+                    </a>
+                </div>
+            </div>
+        </div>
+</div>
 
 
         <h1 class="m-4">Added video links</h1>
-<!-- <div class="container"> -->
+        <!-- <div class="container"> -->
 <div class="row px-4">
 <div class="col-sm-12 text-center">
     <a href="#" 
