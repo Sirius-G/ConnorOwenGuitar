@@ -97,7 +97,7 @@
     <div class="col-sm-12 col-md-6">
         <div class="card mt-4">
                 <div class="card-header greenheader"><strong class="text-white">Admin Registration</strong></div>
-                <div class="card-body whitecard">
+                <div class="card-body whitecard" style="min-height: 150px;">
                     <p>Register a new administration user.</p>
                     <p>Please note that all admin users share the same privileges, including the ability to manage the site's text content and add new admin users.</p>
                 </div>
@@ -114,7 +114,7 @@
         <div class="col-sm-12 col-md-6">
         <div class="card mt-4">
                 <div class="card-header greenheader"><strong class="text-white">Google Analytics</strong></div>
-                <div class="card-body whitecard">
+                <div class="card-body whitecard" style="min-height: 150px;">
                     <p>View your google Analytics page.</p>
                     <p></p>
                 </div>

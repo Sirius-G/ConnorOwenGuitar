@@ -33,7 +33,7 @@ class HomeController extends Controller
     {
         $banner = Banners::where('id', 1)->get();
         $data = Contents::where('id', 1)->get();
-        $videos = Videos::orderby('id', 'desc')->get();
+        $videos = Videos::orderby('title', 'asc')->get();
 
         return view('bio')
             ->with('data', $data)
@@ -57,7 +57,7 @@ class HomeController extends Controller
 
     public function admin()
     {
-        $my_videos = Videos::withTrashed()->get();
+        $my_videos = Videos::withTrashed()->orderby('title', 'asc')->get();
         return view('admin.dashboard')->with('my_videos', $my_videos);
     }
 
