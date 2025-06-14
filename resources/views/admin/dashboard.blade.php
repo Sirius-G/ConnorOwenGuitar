@@ -13,9 +13,9 @@
     <div class="row">
         <div class="col-sm-12 col-md-4">
             <div class="card mt-4">
-                <div class="card-header greenheader"><strong class="text-white">Bio Page</strong></div>
+                <div class="card-header greenheader"><strong class="text-white">Home Page</strong></div>
                 <div class="card-body whitecard">
-                    <p>Edit the text for the Bio page</p>
+                    <p>Edit the text for the Home page</p>
                     <p>Once completed, click save to store any changes in the database.</p>
                 </div>
                 <div class="card-footer">
@@ -24,8 +24,8 @@
                        aria-label="" 
                        class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button my-1" 
                        data-bs-toggle="modal" 
-                       data-bs-target="#Bio">
-                        Edit Bio Page
+                       data-bs-target="#Home">
+                        Edit Home Page
                     </a>
                     <a href="#" 
                        title="" 
@@ -202,7 +202,7 @@
 
 
 <!-- MODALS HERE --> 
-<div class="modal fade" data-bs-backdrop="false" tabindex="-1" role="dialogue" id="Bio">
+<div class="modal fade" data-bs-backdrop="false" tabindex="-1" role="dialogue" id="Home">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
         <div class="modal-body">
@@ -214,7 +214,7 @@
                   <br>
                   <div>
                   <?php $data = Contents::where('id', 1)->get(); ?>
-                    <h1 class="m-4">Edit Bio page contents</h1>
+                    <h1 class="m-4">Edit Home page contents</h1>
                     <br>
                     <div class="container">
                         <div id="user_messages"></div>
@@ -674,7 +674,7 @@
               <div class="col-sm-12">
                   <br>
                   <div>
-                    <h1 class="m-4">Edit your banner image for the Bio page</h1>
+                    <h1 class="m-4">Edit your banner image for the Home page</h1>
                     <div class="container">
                         <hr>
                         <div class="card p-4 greenheader">

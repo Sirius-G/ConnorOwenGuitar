@@ -11,8 +11,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item lft lft1">
-                            <a href="/bio" tabindex="1" title="Bio - Connor Owen Guitar" aria-label="Bio - Connor Owen Guitar" class="nav-link item">
-                                Bio
+                            <a href="/home" tabindex="1" title="Home - Connor Owen Guitar" aria-label="Home - Connor Owen Guitar" class="nav-link item">
+                                Home
                             </a>
                         </li>
                         <li class="nav-item lft">

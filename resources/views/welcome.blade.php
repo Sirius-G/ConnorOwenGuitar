@@ -22,7 +22,7 @@
 
       // Redirect after fade
       setTimeout(() => {
-        window.location.href = "/bio";
+        window.location.href = "/home";
       }, 3000); // total duration = 3 seconds
     };
   </script>

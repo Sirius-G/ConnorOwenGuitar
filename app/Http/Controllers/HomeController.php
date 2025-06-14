@@ -16,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except('welcome', 'bio', 'tuition', 'contact');
+        $this->middleware('auth')->except('welcome', 'home', 'tuition', 'contact');
     }
 
     /**
@@ -29,13 +29,13 @@ class HomeController extends Controller
     {
         return view('welcome');
     }
-    public function bio()
+    public function home()
     {
         $banner = Banners::where('id', 1)->get();
         $data = Contents::where('id', 1)->get();
         $videos = Videos::orderby('title', 'asc')->get();
 
-        return view('bio')
+        return view('home')
             ->with('data', $data)
             ->with('videos', $videos)
             ->with('banner', $banner);

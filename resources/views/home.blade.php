@@ -8,13 +8,16 @@
             <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" class="headerimage">
         @endforeach
         @endif
+        <a href="#TOP" title="Want to learn guitar?" aria-label="Want to learn guitar?" class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button item overbanner">
+            <strong>Want to learn guitar?<br>Click here to read more!</strong>
+        </a>
     </div>
 
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="card over-card">
+            <div class="card over-card" id="TOP">
                 <div class="card-header greenheader">
-                    <strong class="text-white">Bio</strong>
+                    <strong class="text-white">Home</strong>
                     <div class="d-flex justify-content-end" style="margin-top: -20px;">
                         <a href="/tuition" title="Tuition at Connor Owen Guitar" aria-label="Tuition at Connor Owen Guitar" class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button item">
                                 <strong>Want to learn guitar? &nbsp; Find out more</strong>
