@@ -13,11 +13,9 @@
         </a>
     </div>
 
-    <div id="CARDTOP"></div>
-
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="card over-card">
+            <div class="card over-card" id="CARDTOP">
                 <div class="card-header greenheader">
                     <strong class="text-white">Home</strong>
                     <div class="d-flex justify-content-end" style="margin-top: -20px;">
