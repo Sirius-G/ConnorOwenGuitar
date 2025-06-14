@@ -116,7 +116,7 @@ p {
     background-color: var(--greenheader) !important;
 }
 
-.headerimage, .card {
+.headerimage, .header, .card {
     width: 100%;
     border: solid 1px var(--lightgrey);
     margin-left: auto !important;
