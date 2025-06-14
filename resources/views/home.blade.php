@@ -8,12 +8,12 @@
             <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" class="headerimage">
         @endforeach
         @endif
-        <a href="#TOP" title="Want to learn guitar?" aria-label="Want to learn guitar?" class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button item overbanner">
+        <a href="#CARDTOP" title="Want to learn guitar?" aria-label="Want to learn guitar?" class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button item overbanner">
             <strong>Want to learn guitar?<br>Click here to read more!</strong>
         </a>
     </div>
 
-    <div id="TOP"></div>
+    <div id="CARDTOP"></div>
 
     <div class="row justify-content-center">
         <div class="col-md-10">
