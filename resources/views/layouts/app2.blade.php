@@ -17,7 +17,7 @@
         gtag('config', 'G-MB54CC19G5');
     </script>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Sycamore Sound Guitar Tuition') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
