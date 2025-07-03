@@ -3,6 +3,8 @@
 <?php use App\Models\Contents; use App\Models\Banners; ?>
 
 @section('content')
+
+<script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script>
 <div class="container">
     <div id="user_messages"></div>
 
