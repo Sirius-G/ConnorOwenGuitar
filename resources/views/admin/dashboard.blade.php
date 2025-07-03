@@ -272,6 +272,7 @@
 
                     </div>
                     <br><br>
+                    <script src="{{asset('/js/custom.js') }}"></script>
                     <script>
                         function execCmd(command){
                             document.execCommand(command, false, null);
@@ -383,6 +384,7 @@
 
                     </div>
                     <br><br>
+                    <script src="{{asset('/js/custom.js') }}"></script>
                     <script>
                         function execCmd(command){
                             document.execCommand(command, false, null);
@@ -490,6 +492,7 @@
                         @endif
                     </div>
                     <br><br>
+                    <script src="{{asset('/js/custom.js') }}"></script>
                     <script>
                         function execCmd(command){
                             document.execCommand(command, false, null);

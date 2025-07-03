@@ -32,7 +32,7 @@
 <!-- Bootstrap 5.3.6 JS bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
     </script>
-    <script src="{{asset('/js/custom.js') }}"></script>
+    <script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script>
 
     <!-- Custom Styles -->
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}" />
@@ -57,5 +57,6 @@
     <!-- <script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
     </script>
+    <script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script>
     </body>
 </html>
