@@ -272,7 +272,7 @@
 
                     </div>
                     <br><br>
-                    <script src="{{asset('/js/custom.js') }}"></script>
+                    <script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script>
                     <script>
                         function execCmd(command){
                             document.execCommand(command, false, null);
@@ -384,7 +384,7 @@
 
                     </div>
                     <br><br>
-                    <script src="{{asset('/js/custom.js') }}"></script>
+                    <script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script>
                     <script>
                         function execCmd(command){
                             document.execCommand(command, false, null);
@@ -492,7 +492,7 @@
                         @endif
                     </div>
                     <br><br>
-                    <script src="{{asset('/js/custom.js') }}"></script>
+                    <script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script>
                     <script>
                         function execCmd(command){
                             document.execCommand(command, false, null);
