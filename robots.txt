@@ -1,0 +1,19 @@
+# robots.txt for https://sycamoresound.co.uk
+
+User-agent: *
+# Block sensitive or system paths
+Disallow: /vendor/
+Disallow: /storage/
+Disallow: /app/
+Disallow: /bootstrap/
+Disallow: /config/
+Disallow: /database/
+Disallow: /routes/
+Disallow: /resources/
+Disallow: /public/storage/
+
+# Allow everything else
+Allow: /
+
+# Sitemap
+Sitemap: https://sycamoresound.co.uk/sitemap.xml
